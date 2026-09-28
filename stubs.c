@@ -1,5 +1,5 @@
 /* stubs.c - TEMPORARY placeholders
-#include
+#include <stdio.h>
 #include "mfms.h"
 void employeeMenu() { printf("\n[Employee module not ready yet]\n"); }
 void supplierMenu() { printf("\n[Supplier module not ready yet]\n"); }
