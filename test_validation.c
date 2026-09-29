@@ -1,6 +1,6 @@
 /* test_validation.c - Small program to test the validation functions.
 * Build with: gcc test_validation.c validation.c -o test_validation */
-#include
+#include <stdio.h>
 #include "validation.h"
 
 int main()
