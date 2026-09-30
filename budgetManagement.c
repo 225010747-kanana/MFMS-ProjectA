@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "budgetManagement.h"
 
 const int maxDepartment = 50;
 
