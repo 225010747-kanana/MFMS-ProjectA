@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "budgetManagement.h"
 
-const int maxDepartment = 50;
+void budgetMenu() {
+    int n;
 
 void enterBudget(int n,
                  char department[][50],
