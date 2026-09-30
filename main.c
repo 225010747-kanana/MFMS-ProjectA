@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include "mfms.h"
 #include "validation.h"
+#include "reports.h"
 
 void displayMenu()
 {
@@ -19,6 +20,19 @@ void displayMenu()
 int main()
 {
     int choice;
+    double salaries[100];
+    double budgets[MAX_DEPARTMENTS];
+    double expenditures[MAX_DEPARTMENTS];
+    char deptNames[MAX_DEPARTMENTS][50];
+    char supplierNames[100][100];
+    char supplierIDs[100][20];
+    char assetNames[100][100];
+    char assetIDs[100][20];
+    double assetValues[100];
+    int empCount = 0;
+    int deptCount = 0;
+    int supplierCount = 0;
+    int assetCount = 0;
 
     do
     {
@@ -40,7 +54,10 @@ int main()
                 assetMenu();
                 break;
             case 5:
-                reportsMenu();
+                displayReportsMenu(salaries, empCount,
+                                   budgets, expenditures, deptNames, deptCount,
+                                   supplierNames, supplierIDs, supplierCount,
+                                   assetNames, assetIDs, assetValues, assetCount);
                 break;
             case 6:
                 printf("\nThank you. Goodbye!\n");
