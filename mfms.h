@@ -2,13 +2,10 @@
 #define MFMS_H
 
 /* mfms.h - Integration header 
- * Every module must write the function listed for it below.
- * main.c only calls these, so each student can work on their own file. */
+ * Declarations for modules that are not finished yet.
+ * Budget, suppliers and reports have their own headers. */
 
-void employeeMenu();   /* Student 1 - employees.c */
-void budgetMenu();     /* Student 2 - budget.c    */
-void supplierMenu();   /* Student 3 - suppliers.c */
-void assetMenu();      /* Student 4 - assets.c    */
-void reportsMenu();    /* Student 5 - reports.c   */
+int employeeMenu(double salaries[]);                                  
+int assetMenu(char names[][100], char ids[][20], double values[]);    
 
 #endif
