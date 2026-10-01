@@ -1,3 +1,6 @@
+#ifndef VALIDATION_H
+#define VALIDATION_H
+
 /* validation.h - Functions for input and validation */
 
 /* Validated input: every function loops until the user provides a valid value */
@@ -11,3 +14,5 @@ void getPhone(char prompt[], char text[]);
 int isBlank(char text[]);
 int isValidEmail(char text[]);
 int isValidPhone(char text[]);
+
+#endif

@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include "mfms.h"
 #include "validation.h"
+#include "budgetManagement.h"
+#include "suppliers.h"
 #include "reports.h"
 
 void displayMenu()
@@ -24,8 +26,8 @@ int main()
     double budgets[MAX_DEPARTMENTS];
     double expenditures[MAX_DEPARTMENTS];
     char deptNames[MAX_DEPARTMENTS][50];
-    char supplierNames[100][100];
-    char supplierIDs[100][20];
+    char supplierNames[MAX_SUPPLIERS][100];
+    char supplierIDs[MAX_SUPPLIERS][20];
     char assetNames[100][100];
     char assetIDs[100][20];
     double assetValues[100];
@@ -42,16 +44,16 @@ int main()
         switch (choice)
         {
             case 1:
-                employeeMenu();
+                empCount = employeeMenu(salaries);
                 break;
             case 2:
                 budgetMenu();
                 break;
             case 3:
-                supplierMenu();
+                supplierCount = supplierMenu(supplierNames, supplierIDs);
                 break;
             case 4:
-                assetMenu();
+                assetCount = assetMenu(assetNames, assetIDs, assetValues);
                 break;
             case 5:
                 displayReportsMenu(salaries, empCount,
