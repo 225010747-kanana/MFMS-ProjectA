@@ -1,10 +1,10 @@
 #ifndef REPORTS_H
 #define REPORTS_H
 
-//maximum number of departments
+/*maximum number of departments*/
 #define MAX_DEPARTMENTS 50
 
-//function declarations
+/*function declarations*/
 void displayReportsMenu(
     double salaries[], int empCount,
     double budgets[], double expenditures[], char deptNames[][50], int deptCount,
@@ -17,4 +17,4 @@ void generateBudgetReport(double budgets[], double expenditures[], char deptName
 void generateSupplierReport(char supplierNames[][100], char supplierIDs[][20], int supplierCount);
 void generateAssetReport(char assetNames[][100], char assetIDs[][20], double assetValues[], int assetCount);
 
-#endif //reports.h
+#endif /* REPORTS_H */

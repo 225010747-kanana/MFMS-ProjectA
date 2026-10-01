@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "reports.h"
 
-//main entry point for the Reports module called from main.c
+/*main entry point for the Reports module called from main.c*/
 void displayReportsMenu(
     double salaries[], int empCount,
     double budgets[], double expenditures[], char deptNames[][50], int deptCount,
@@ -20,10 +20,10 @@ void displayReportsMenu(
         printf("5. Return to Main Menu\n\n");
         printf("Enter your choice: ");
         
-        //input validation for menu choice
+        /*input validation for menu choice*/
         if (scanf("%d", &choice) != 1) {
             printf("Invalid input. Please enter a number.\n");
-            while (getchar() != '\n'); //clear input buffer
+            while (getchar() != '\n'); /*clear input buffer*/
             continue;
         }
 
@@ -49,7 +49,7 @@ void displayReportsMenu(
     } while (choice != 5);
 }
 
-// 1. Employee Report Implementation
+/*1. Employee Report Implementation*/
 void generateEmployeeReport(double salaries[], int empCount) {
     printf("===============================================\n");
     printf("-------------- Employee Report ----------------\n");
@@ -77,7 +77,7 @@ void generateEmployeeReport(double salaries[], int empCount) {
     printf("Lowest Salary: N$%.2f\n\n", lowestSalary);
 }
 
-// 2. Budget Report Implementation
+/*2. Budget Report Implementation*/
 void generateBudgetReport(double budgets[], double expenditures[], char deptNames[][50], int deptCount) {
     printf("===============================================\n");
     printf("--------------- Budget Report -----------------\n");
@@ -110,11 +110,11 @@ void generateBudgetReport(double budgets[], double expenditures[], char deptName
         }
     }
     if (exceededCount == 0) {
-        printf(" None. All departments are within budget.\n\n");
+        printf("None. All departments are within budget.\n\n");
     }
 }
 
-// 3. Supplier Report Implementation
+/*3. Supplier Report Implementation*/
 void generateSupplierReport(char supplierNames[][100], char supplierIDs[][20], int supplierCount) {
     printf("===============================================\n");
     printf("-------------- Supplier Report ----------------\n");
@@ -131,7 +131,7 @@ void generateSupplierReport(char supplierNames[][100], char supplierIDs[][20], i
     }
 }
 
-// 4. Asset Report Implementation
+/*4. Asset Report Implementation*/
 void generateAssetReport(char assetNames[][100], char assetIDs[][20], double assetValues[], int assetCount) {
     printf("===============================================\n");
     printf("----------------- Asset Report ----------------\n");
