@@ -88,17 +88,28 @@ int isValidPhone(char text[])
 int getInt(char prompt[], int min, int max)
 {
     int value = 0;
+    int result;
+    int valid = 0;
 
     do
     {
         printf("%s", prompt);
-        scanf("%d", &value);
+        result = scanf("%d", &value);
+        scanf("%*[^\n]");   /* discard anything left on the line */
 
-        if (value < min || value > max)
+        if (result != 1)
+        {
+            printf("Error: enter a whole number.\n");
+        }
+        else if (value < min || value > max)
         {
             printf("Error: enter a number between %d and %d.\n", min, max);
         }
-    } while (value < min || value > max);
+        else
+        {
+            valid = 1;
+        }
+    } while (valid == 0);
 
     return value;
 }
@@ -107,17 +118,28 @@ int getInt(char prompt[], int min, int max)
 double getDouble(char prompt[], double min, double max)
 {
     double value = 0.0;
+    int result;
+    int valid = 0;
 
     do
     {
         printf("%s", prompt);
-        scanf("%lf", &value);
+        result = scanf("%lf", &value);
+        scanf("%*[^\n]");   /* discard anything left on the line */
 
-        if (value < min || value > max)
+        if (result != 1)
+        {
+            printf("Error: enter a number.\n");
+        }
+        else if (value < min || value > max)
         {
             printf("Error: value must be between %.2f and %.2f.\n", min, max);
         }
-    } while (value < min || value > max);
+        else
+        {
+            valid = 1;
+        }
+    } while (valid == 0);
 
     return value;
 }
