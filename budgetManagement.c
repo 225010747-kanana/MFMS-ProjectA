@@ -1,30 +1,11 @@
 #include <stdio.h>
+#include "budgetManagement.h"
 
-const int maxDepartment = 50;
-
-void enterBudget(int n,
-                 char department[][50],
-                 double budget[],
-                 double expenditure[],
-                 double remaining[]);
-
-void displayBudget(int n,
-                   char department[][50],
-                   double budget[],
+int budgetMenu(double budget[],
                    double expenditure[],
-                   double remaining[]);
-
-void checkExceeded(int n,
-                   char department[][50],
-                   double budget[],
-                   double expenditure[]);
-
-void budgetMenu() {
+                   char department[][50]){
     int n;
 
-    char department[maxDepartment][50];
-    double budget[maxDepartment];
-    double expenditure[maxDepartment];
     double remaining[maxDepartment];
 
     printf("How many departments? ");
@@ -32,13 +13,15 @@ void budgetMenu() {
 
     if (n <= 0 || n > maxDepartment) {
         printf("Invalid number of departments.\n");
-        return;
+        return 0;
     }
 
     enterBudget(n, department, budget, expenditure, remaining);
     displayBudget(n, department, budget, expenditure, remaining);
     checkExceeded(n, department, budget, expenditure);
+    return n;
 }
+
 
 void enterBudget(int n,
                  char department[][50],
