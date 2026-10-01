@@ -47,7 +47,7 @@ int main()
                 empCount = employeeMenu(salaries);
                 break;
             case 2:
-                budgetMenu();
+                deptCount = budgetMenu(budgets, expenditures, deptNames);
                 break;
             case 3:
                 supplierCount = supplierMenu(supplierNames, supplierIDs);
