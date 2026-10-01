@@ -20,6 +20,8 @@ void checkExceeded(int n,
                    double budget[],
                    double expenditure[]);
 
-void budgetMenu();
-
+int budgetMenu(double budget[],
+                   double expenditure[],
+                   char department[][50]);
+                  
 #endif
