@@ -65,9 +65,9 @@ void displayBudget(int n,
 
     for (i = 0; i < n; i++) {
         printf("\nDepartment: %s\n", department[i]);
-        printf("Allocated Budget: N$%.2lf\n", budget[i]);
-        printf("Expenditure: N$%.2lf\n", expenditure[i]);
-        printf("Remaining Budget: N$%.2lf\n", remaining[i]);
+        printf("Allocated Budget: N$%.2f\n", budget[i]);
+        printf("Expenditure: N$%.2f\n", expenditure[i]);
+        printf("Remaining Budget: N$%.2f\n", remaining[i]);
 
         if (expenditure[i] <= budget[i])
             printf("Status: WITHIN BUDGET\n");
@@ -87,7 +87,7 @@ void checkExceeded(int n,
 
     for (i = 0; i < n; i++) {
         if (expenditure[i] > budget[i]) {
-            printf("%s exceeded budget by N$%.2lf\n",
+            printf("%s exceeded budget by N$%.2f\n",
                    department[i],
                    expenditure[i] - budget[i]);
             found = 1;
